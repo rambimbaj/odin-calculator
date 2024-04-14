@@ -23,7 +23,6 @@ function divide(number1, number2) {
   }
   return number1 / number2;
 }
-
 function operate() {
   const num1 = parseFloat(number1);
   const num2 = parseFloat(number2);
@@ -47,18 +46,15 @@ function operate() {
   display.textContent = result;
   showResult = true;
 }
-
 function appendDisplay(value) {
   display.textContent += value;
 }
-
 function clearDisplay() {
   display.textContent = "";
   number1 = "";
   number2 = "";
   operator = "";
 }
-
 numberButton.forEach((element) => {
   element.addEventListener("click", () => {
     if (showResult) {
@@ -73,7 +69,6 @@ numberButton.forEach((element) => {
     }
   });
 });
-
 operatorButton.forEach((element) => {
   element.addEventListener("click", () => {
     if (number1 && !operator) {
@@ -82,11 +77,9 @@ operatorButton.forEach((element) => {
     }
   });
 });
-
 clearButton.addEventListener("click", () => {
   clearDisplay();
 });
-
 equalsButton.addEventListener("click", () => {
   if (number1 && number2 && operator) {
     operate();
